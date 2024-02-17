@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="weeder" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    
+	<storeData>
+        <name>
+            <en>Einboeck Aerostar Exact 600 DK edit</en></name>
+        <specs>
+            <neededPower>60</neededPower>
+            <workingWidth>6.0</workingWidth>
+            <combination filterCategory="weights" filterSpec="weight" filterSpecMin="600" filterSpecMax="700"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_weeder</function>
+        </functions>
+        <image>icons/store_exact600.dds</image>
+        <price>9500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>EINBOECK</brand>
+        <category>DennisKtools</category>
+        <shopHeight>3.75</shopHeight>
+        <shopTranslationOffset>0 0.017 0</shopTranslationOffset>
+        <shopRotationOffset>0.083 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>2235904</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>360192</indexBufferMemoryUsage>
+        <textureMemoryUsage>1507328</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    
+	<base>
+        <typeDesc>$l10n_typeDesc_weeder</typeDesc>
+        <filename>i3d/exact600.i3d</filename>
+        <size width="3.8" length="3.5" lengthOffset="0.05"/>
+        <speedLimit value="17"/>
+        <components>
+            <component centerOfMass="0 0.3 -0.3" solverIterationCount="10" mass="940"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL"/>
+    </base>
+    
+	<wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels hasSurfaceSounds="true">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.1" repr="wheelFrontLeftInner" forcePointRatio="0.2" initialCompression="15" suspTravel="0.05" spring="10" damper="15" rotationDamping="0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.1" repr="wheelFrontRightInner" forcePointRatio="0.2" initialCompression="15" suspTravel="0.05" spring="10" damper="15" rotationDamping="0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.1" repr="wheelFrontLeftOuter" forcePointRatio="0.2" initialCompression="15" suspTravel="0.05" spring="10" damper="15" rotationDamping="0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.1" repr="wheelFrontRightOuter" forcePointRatio="0.2" initialCompression="15" suspTravel="0.05" spring="10" damper="15" rotationDamping="0.002"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.3" repr="axisBackLeft" driveNode="wheelBackLeft" forcePointRatio="0.2" initialCompression="25" suspTravel="0.05" spring="24" damper="15" rotationDamping="0.02" versatileYRot="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.3" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.2" initialCompression="25" suspTravel="0.05" spring="24" damper="15" rotationDamping="0.02" versatileYRot="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <rimColor material="18">SHARED_WHITE1</rimColor>
+        <hubs>
+            <color0 useBaseColor="true"/>
+            <hub linkNode="wheelFrontLeftInner" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true" scale="0.14 0.14 0.14"/>
+            <hub linkNode="wheelFrontRightInner" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.14 0.14 0.14"/>
+            <hub linkNode="wheelFrontLeftOuter" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true" scale="0.14 0.14 0.14"/>
+            <hub linkNode="wheelFrontRightOuter" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.14 0.14 0.14"/>
+        </hubs>
+    </wheels>
+    
+	<attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="implement" topReferenceNode="topReferenceNode" lowerRotationOffset="15" upperRotationOffset="5">
+                <distanceToGround lower="0.58" upper="1.1"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <brakeForce force="0.05"/>
+    </attachable>
+    
+	<connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" length="1.2" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="hydraulicOut01" length="1.2" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn02" length="1.0" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut02" length="1.3" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicOut02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+    
+	<dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut02_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn02_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|1" linkNode="electricIn_detachedAdapter" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+    
+	<powerConsumer forceNode="exact600_main_component1" maxForce="8"/>
+    
+	<lights>
+	
+		<sharedLight linkNode="sideMarkerL_01" filename="lights/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideMarkerL_02" filename="lights/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideMarkerR_01" filename="lights/sideMarker11Orange.xml"/>
+		<sharedLight linkNode="sideMarkerR_02" filename="lights/sideMarker11Orange.xml"/>
+		
+		<sharedLight linkNode="contourLightL_01" filename="lights/sideMarker27_left.xml"/>
+		<sharedLight linkNode="contourLightR_01" filename="lights/sideMarker27_right.xml"/>
+		
+		<sharedLight linkNode="rearLight_01" filename="lights/sideMarker11Red.xml"/>
+		<sharedLight linkNode="rearLight_02" filename="lights/sideMarker11Red.xml"/>
+		<sharedLight linkNode="rearLight_03" filename="lights/sideMarker11Red.xml"/>
+	
+        <realLights>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0"/>
+                <light node="sidemarkerOrange_real" lightTypes="0"/>
+                <light node="sidemarkerRed_real" lightTypes="0"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <brakeLight node="backLightsHigh1"/>
+            </high>
+        </realLights>
+        <defaultLights>
+            <defaultLight shaderNode="backlight_static" lightTypes="0"/>
+			
+            <defaultLight shaderNode="sideMarkerL_01" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="sideMarkerL_02" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="sideMarkerR_01" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="sideMarkerR_02" lightTypes="0" intensity="1"/>
+			
+            <defaultLight shaderNode="contourLightL_01" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="contourLightR_01" lightTypes="0" intensity="1"/>
+			
+            <defaultLight shaderNode="rearLight_01" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="rearLight_02" lightTypes="0" intensity="1"/>
+            <defaultLight shaderNode="rearLight_03" lightTypes="0" intensity="1"/>
+			
+        </defaultLights>
+        <brakeLights>
+            <brakeLight shaderNode="backlight_static"/>
+        </brakeLights>
+        <turnLights>
+            <turnLightLeft shaderNode="turnLeft_static"/>
+            <turnLightRight shaderNode="turnRight_static"/>
+        </turnLights>
+    </lights>
+    
+	<groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" forceFactor="1" threshold="0.1"/>
+    </groundReferenceNodes>
+    
+	<workAreas>
+        <workArea type="weeder" functionName="processWeederArea">
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.1"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+    </workAreas>
+    
+	<workParticles>
+        <particle>
+            <node node="smokeEmitter" refNodeIndex="1" particleType="SOIL_SMOKE" adjustColor="true"/>
+            <node node="smokeEmitter" refNodeIndex="1" particleType="weederGrass" adjustColor="true" emitCountScale="2"/>
+        </particle>
+    </workParticles>
+    
+	<foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1">
+                    <foldingPart animationName="folding" speedScale="0.75"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+    
+	<animations>
+        <animation name="folding">
+            <part node="leftArm" startTime="0" endTime="3" startRot="0 0 0" endRot="0 0 95"/>
+            <part node="rightArm" startTime="0" endTime="3" startRot="0 0 0" endRot="0 0 -95"/>
+            <part node="leftArmSpringRef" startTime="0" endTime="2" startTrans="-0.007 0 0.439" endTrans="-0.011 0 0.543"/>
+            <part node="rightArmSpringRef" startTime="0" endTime="2" startTrans="0.007 0 0.439" endTrans="0.011 0 0.543"/>
+            <part direction="1" node="lockArm" startTime="2.6" endTime="2.8" startRot="0 0 0" endRot="0 0 2"/>
+            <part direction="1" node="lockArm" startTime="2.8" endTime="3" startRot="0 0 2" endRot="0 0 0"/>
+            <part direction="-1" node="lockArm" startTime="2.6" endTime="2.8" startRot="0 0 0" endRot="0 0 2"/>
+            <part direction="-1" node="lockArm" startTime="3" endTime="3.2" startRot="0 0 2" endRot="0 0 0"/>
+            <sound template="defaultHydraulicSound" startTime="0.01" endTime="3" volumeScale="1.4" pitchScale="0.8"/>
+            <sound template="sheetImp02" startTime="3" direction="-1" volumeScale="1.4" pitchScale="0.8"/>
+            <sound template="sheetImp06" startTime="3" direction="-1" volumeScale="1.8" pitchScale="0.8"/>
+            <sound template="sheetImp01" startTime="0.01" direction="-1" volumeScale="1.8" pitchScale="0.8"/>
+            <sound template="clackVar4" startTime="0.01" direction="-1" volumeScale="1.3" pitchScale="0.7"/>
+            <sound template="sheetImp02" startTime="0.01" direction="1" volumeScale="2.8" pitchScale="0.7"/>
+            <sound template="sheetImp03" startTime="0.01" direction="1" volumeScale="1.8" pitchScale="0.7"/>
+            <sound template="sheetImp05" startTime="3" direction="1" volumeScale="2.4" pitchScale="0.7"/>
+            <sound template="clackVar4" startTime="2.9" direction="1" volumeScale="1.5" pitchScale="0.7"/>
+        </animation>
+    </animations>
+    
+	<cylindered>
+        <movingTools>
+            <movingTool node="leftArm" playSound="true" wheelIndices="3">
+                <dependentPart node="hydraulic"/>
+                <dependentPart node="leftArmSpringArm"/>
+                <dependentPart node="leftArmSpring"/>
+            </movingTool>
+            <movingTool node="rightArm" playSound="false" wheelIndices="4">
+                <dependentPart node="rightArmSpringArm"/>
+                <dependentPart node="rightArmSpring"/>
+            </movingTool>
+        </movingTools>
+        <movingParts>
+            <movingPart node="leftArmSpringArm" referencePoint="leftArmSpringArmRef" referenceFrame="leftArmSpringArmRef"/>
+            <movingPart node="rightArmSpringArm" referencePoint="rightArmSpringArmRef" referenceFrame="rightArmSpringArmRef"/>
+            <movingPart node="leftArmSpring" referencePoint="leftArmSpringRef" referenceFrame="leftArmSpringRef" scaleZ="true"/>
+            <movingPart node="rightArmSpring" referencePoint="rightArmSpringRef" referenceFrame="rightArmSpringRef" scaleZ="true"/>
+            <movingPart node="hydraulic" referencePoint="hydraulicRef" referenceFrame="hydraulicRef">
+                <translatingPart node="hydraulicPunch"/>
+            </movingPart>
+        </movingParts>
+    </cylindered>
+    
+	<weeder isGrasslandWeeder="true">
+        <sounds>
+            <work template="WEEDER_01"/>
+        </sounds>
+    </weeder>
+    
+	<ai>
+        <needsLowering value="true"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="6.1" height="1.6"/>
+        <agentAttachment width="3" height="3.0" length="3" lengthOffset="0.1"/>
+    </ai>
+    
+	<foliageBending>
+        <bendingNode minX="-1.5" maxX="1.5" minZ="-1.4" maxZ="1.6" yOffset="0.3"/>
+        <bendingNode minX="0.75" maxX="2.3" minZ="-1.7" maxZ="-0.15" yOffset="-0.5" node="leftArm"/>
+        <bendingNode minX="-2.3" maxX="-0.75" minZ="-1.7" maxZ="-0.15" yOffset="-0.5" node="rightArm"/>
+    </foliageBending>
+    
+	<baseMaterial>
+        <material name="exact600_mat" baseNode="exact600_vis">
+            <shaderParameter name="colorMat0" value="EINBOECK_RED1"/>
+        </material>
+    </baseMaterial>
+	
+	<baseMaterialConfigurations  price="1000" useDefaultColors="true"  defaultColorIndex="0" title="Base colors">
+		<material 						name="exact600_mat" shaderParameter="colorMat0"/>
+			
+		<baseMaterialConfiguration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<baseMaterialConfiguration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<baseMaterialConfiguration 	name="DennisK Black" 		color="0 0 0"/>
+		<baseMaterialConfiguration 	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<baseMaterialConfiguration 	name="Einboeck Red" 		color="EINBOECK_RED1"/>
+	</baseMaterialConfigurations >
+	
+	<rimColorConfigurations useDefaultColors="true" price="300" defaultColorIndex="0">
+	
+		<rimColorConfiguration 	name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<rimColorConfiguration 	name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<rimColorConfiguration 	name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<rimColorConfiguration 	name="DennisK Black" 		color="0 0 0"/>
+		<rimColorConfiguration 	name="Einboeck Red" 		color="EINBOECK_RED1"/>
+    </rimColorConfigurations>
+	
+	<designConfigurations price="500" title="Additional Lights">
+		<designConfiguration name="No">
+			<objectChange node="additionalLights"	visibilityActive="false"	visibilityInactive="true"/>
+		</designConfiguration>
+		<designConfiguration name="Yes">
+			<objectChange node="additionalLights"	visibilityActive="true"	visibilityInactive="false"/>
+		</designConfiguration>
+	</designConfigurations>
+    
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    
+	<washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+    
+	<i3dMappings>
+        <i3dMapping id="exact600_main_component1" 		node="0>"/>
+		
+        <i3dMapping id="exact600_vis" 					node="0>0"/>
+		
+        <i3dMapping id="attacherJoint" 					node="0>0|0|0"/>
+        <i3dMapping id="topReferenceNode" 				node="0>0|0|1"/>
+        <i3dMapping id="hydraulicIn01" 					node="0>0|0|2|0"/>
+        <i3dMapping id="hydraulicOut01" 				node="0>0|0|2|1"/>
+        <i3dMapping id="hydraulicIn02" 					node="0>0|0|2|2"/>
+        <i3dMapping id="hydraulicOut02" 				node="0>0|0|2|3"/>
+        <i3dMapping id="hydraulicIn01_detached" 		node="0>0|0|2|4"/>
+        <i3dMapping id="hydraulicIn01_detachedAdapter" 	node="0>0|0|2|4|0"/>
+        <i3dMapping id="hydraulicOut01_detached" 		node="0>0|0|2|5"/>
+        <i3dMapping id="electricIn_detachedAdapter" 	node="0>0|0|2|5|0"/>
+        <i3dMapping id="hydraulicOut02_detached" 		node="0>0|0|2|6"/>
+        <i3dMapping id="hydraulicOut02_detachedAdapter"	node="0>0|0|2|6|0"/>
+        <i3dMapping id="hydraulicIn02_detached" 		node="0>0|0|2|7"/>
+        <i3dMapping id="hydraulicIn02_detachedAdapter" 	node="0>0|0|2|7|0"/>
+		
+        <i3dMapping id="wheelFrontLeftInner" 			node="0>0|1|0"/>
+        <i3dMapping id="wheelFrontRightInner" 			node="0>0|1|1"/>
+
+        <i3dMapping id="turnRight_static" 				node="0>0|2|0|0"/>
+        <i3dMapping id="backlight_static" 				node="0>0|2|0|1"/>
+        <i3dMapping id="turnLeft_static" 				node="0>0|2|0|2"/>
+        <i3dMapping id="backLightsHigh1" 				node="0>0|2|1|0"/>
+        <i3dMapping id="turnLightLeftBack" 				node="0>0|2|2|0"/>
+        <i3dMapping id="turnLightRightBack" 			node="0>0|2|2|1"/>
+		
+        <i3dMapping id="leftArm" 						node="0>0|3|0"/>
+        <i3dMapping id="hydraulicRef" 					node="0>0|3|0|0"/>
+        <i3dMapping id="leftArmSpringArm" 				node="0>0|3|0|1"/>
+        <i3dMapping id="leftArmSpringRef" 				node="0>0|3|0|1|0"/>
+        <i3dMapping id="wheelFrontLeftOuter" 			node="0>0|3|0|2"/>
+        <i3dMapping id="rightArm" 						node="0>0|3|1"/>
+        <i3dMapping id="hydraulic" 						node="0>0|3|1|0"/>
+        <i3dMapping id="hydraulicPunch" 				node="0>0|3|1|0|0"/>
+        <i3dMapping id="lockArm" 						node="0>0|3|1|0|1|0"/>
+        <i3dMapping id="rightArmSpringArm" 				node="0>0|3|1|1"/>
+        <i3dMapping id="rightArmSpringRef" 				node="0>0|3|1|1|0"/>
+        <i3dMapping id="wheelFrontRightOuter" 			node="0>0|3|1|2"/>
+        <i3dMapping id="axisBackLeft" 					node="0>0|3|2|0"/>
+        <i3dMapping id="wheelBackLeft" 					node="0>0|3|2|0|0"/>
+        <i3dMapping id="axisBackRight" 					node="0>0|3|2|1"/>
+        <i3dMapping id="wheelBackRight" 				node="0>0|3|2|1|0"/>
+        <i3dMapping id="leftArmSpring" 					node="0>0|3|3"/>
+        <i3dMapping id="rightArmSpring" 				node="0>0|3|4"/>
+        <i3dMapping id="leftArmSpringArmRef" 			node="0>0|3|5"/>
+        <i3dMapping id="rightArmSpringArmRef" 			node="0>0|3|6"/>
+		
+        <i3dMapping id="workAreaStart" 					node="0>0|4|0"/>
+        <i3dMapping id="workAreaWidth" 					node="0>0|4|1"/>
+        <i3dMapping id="workAreaHeight" 				node="0>0|4|2"/>
+        <i3dMapping id="groundReferenceNode" 			node="0>0|4|3"/>
+		
+        <i3dMapping id="aiMarkerLeft" 					node="0>0|5|0"/>
+        <i3dMapping id="aiMarkerRight" 					node="0>0|5|1"/>
+        <i3dMapping id="aiMarkerBack" 					node="0>0|5|2"/>
+        <i3dMapping id="aiCollisionNode" 				node="0>0|5|3"/>
+		
+        <i3dMapping id="smokeEmitter" 					node="0>0|6|0"/>
+		
+        <i3dMapping id="additionalLights" 				node="0>0|9"/>
+        <i3dMapping id="sideMarkerL_01" 				node="0>0|9|0|0"/>
+        <i3dMapping id="sideMarkerL_02" 				node="0>0|9|0|1"/>
+        <i3dMapping id="sideMarkerR_01" 				node="0>0|9|0|2"/>
+        <i3dMapping id="sideMarkerR_02" 				node="0>0|9|0|3"/>
+        <i3dMapping id="contourLightL_01" 				node="0>0|9|1|0"/>
+        <i3dMapping id="contourLightR_01" 				node="0>0|9|1|1"/>
+        <i3dMapping id="rearLight_01" 					node="0>0|9|2|0"/>
+        <i3dMapping id="rearLight_02" 					node="0>0|9|2|1"/>
+        <i3dMapping id="rearLight_03" 					node="0>0|9|2|2"/>
+        <i3dMapping id="sidemarkerOrange_real" 			node="0>0|9|3|0"/>
+        <i3dMapping id="sidemarkerRed_real" 			node="0>0|9|3|1"/>
+		
+		
+    </i3dMappings>
+</vehicle>
